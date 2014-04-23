@@ -1,0 +1,24 @@
+крс 23, 2014 11:13:40 PM bag.MyLinkedList main
+FINE: Assert numElem>=0 passed succesfully
+крс 23, 2014 11:13:45 PM bag.MyLinkedList main
+INFO: List initialized with 5 elements
+крс 23, 2014 11:13:49 PM bag.MyLinkedList main
+INFO: 4 added to the beggining
+крс 23, 2014 11:13:52 PM bag.MyLinkedList main
+INFO: 9 added to the end
+крс 23, 2014 11:13:56 PM bag.MyLinkedList main
+INFO: First element deleted
+крс 23, 2014 11:13:56 PM bag.MyLinkedList main
+INFO: Last element deleted
+крс 23, 2014 11:14:05 PM bag.MyLinkedList main
+FINE: Assert numElem>=0 passed succesfully
+крс 23, 2014 11:14:12 PM bag.MyLinkedList main
+INFO: 3 elements added after element 12
+крс 23, 2014 11:14:19 PM bag.MyLinkedList main
+INFO: Assert numElem>=0 passed succesfully
+крс 23, 2014 11:14:25 PM bag.MyLinkedList main
+INFO: 1 elements deleted after element 1
+крс 23, 2014 11:14:28 PM bag.MyLinkedList main
+INFO: List sorting done
+крс 23, 2014 11:14:31 PM bag.MyLinkedList main
+INFO: Showing list
