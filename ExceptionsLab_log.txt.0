@@ -1,24 +1,98 @@
-крс 23, 2014 11:13:40 PM bag.MyLinkedList main
-FINE: Assert numElem>=0 passed succesfully
-крс 23, 2014 11:13:45 PM bag.MyLinkedList main
-INFO: List initialized with 5 elements
-крс 23, 2014 11:13:49 PM bag.MyLinkedList main
-INFO: 4 added to the beggining
-крс 23, 2014 11:13:52 PM bag.MyLinkedList main
-INFO: 9 added to the end
-крс 23, 2014 11:13:56 PM bag.MyLinkedList main
-INFO: First element deleted
-крс 23, 2014 11:13:56 PM bag.MyLinkedList main
-INFO: Last element deleted
-крс 23, 2014 11:14:05 PM bag.MyLinkedList main
-FINE: Assert numElem>=0 passed succesfully
-крс 23, 2014 11:14:12 PM bag.MyLinkedList main
-INFO: 3 elements added after element 12
-крс 23, 2014 11:14:19 PM bag.MyLinkedList main
-INFO: Assert numElem>=0 passed succesfully
-крс 23, 2014 11:14:25 PM bag.MyLinkedList main
-INFO: 1 elements deleted after element 1
-крс 23, 2014 11:14:28 PM bag.MyLinkedList main
-INFO: List sorting done
-крс 23, 2014 11:14:31 PM bag.MyLinkedList main
+крс 25, 2014 1:10:57 AM bag.MyLinkedList pushEnd
+INFO: Added element 2 to the end of the list
+крс 25, 2014 1:10:58 AM bag.MyLinkedList pushEnd
+INFO: Added element 7 to the end of the list
+крс 25, 2014 1:10:59 AM bag.MyLinkedList pushEnd
+INFO: Added element 9 to the end of the list
+крс 25, 2014 1:11:00 AM bag.MyLinkedList pushEnd
+INFO: Added element 4 to the end of the list
+крс 25, 2014 1:11:00 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:00 AM bag.MyLinkedList main
+INFO: List initialized with 4 elements
+крс 25, 2014 1:11:05 AM bag.MyLinkedList pushBeginning
+INFO: Added element 6 to the beggining of the list
+крс 25, 2014 1:11:05 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:13 AM bag.MyLinkedList pushEnd
+INFO: Added element 7 to the end of the list
+крс 25, 2014 1:11:13 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:13 AM bag.MyLinkedList main
+INFO: 7 added to the end
+крс 25, 2014 1:11:19 AM bag.MyLinkedList popBeginning
+INFO: First element of the list deleted
+крс 25, 2014 1:11:19 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:20 AM bag.MyLinkedList popBeginning
+INFO: First element of the list deleted
+крс 25, 2014 1:11:20 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:20 AM bag.MyLinkedList popBeginning
+INFO: First element of the list deleted
+крс 25, 2014 1:11:20 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:21 AM bag.MyLinkedList popBeginning
+INFO: First element of the list deleted
+крс 25, 2014 1:11:21 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:22 AM bag.MyLinkedList popBeginning
+INFO: First element of the list deleted
+крс 25, 2014 1:11:22 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:23 AM bag.MyLinkedList popBeginning
+INFO: First element of the list deleted
+крс 25, 2014 1:11:23 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:24 AM bag.MyLinkedList main
+SEVERE: Exception:
+java.lang.NullPointerException
+	at bag.MyLinkedList.popBeginning(MyLinkedList.java:55)
+	at bag.MyLinkedList.main(MyLinkedList.java:225)
+
+крс 25, 2014 1:11:24 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:11:42 AM bag.MyLinkedList main
+SEVERE: Exception:
+java.lang.NullPointerException
+	at bag.MyLinkedList.popEnd(MyLinkedList.java:65)
+	at bag.MyLinkedList.main(MyLinkedList.java:235)
+
+крс 25, 2014 1:11:42 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:13:03 AM bag.MyLinkedList pushBeginning
+INFO: Added element 4 to the beggining of the list
+крс 25, 2014 1:13:03 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:13:06 AM bag.MyLinkedList popEnd
+INFO: Last element of the list deleted
+крс 25, 2014 1:13:06 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:13:15 AM bag.MyLinkedList pushEnd
+INFO: Added element 5 to the end of the list
+крс 25, 2014 1:13:15 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:13:15 AM bag.MyLinkedList main
+INFO: 5 added to the end
+крс 25, 2014 1:13:18 AM bag.MyLinkedList pushEnd
+INFO: Added element 87 to the end of the list
+крс 25, 2014 1:13:18 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:13:18 AM bag.MyLinkedList main
+INFO: 87 added to the end
+крс 25, 2014 1:13:20 AM bag.MyLinkedList pushEnd
+INFO: Added element 13 to the end of the list
+крс 25, 2014 1:13:20 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:13:20 AM bag.MyLinkedList main
+INFO: 13 added to the end
+крс 25, 2014 1:13:42 AM bag.MyLinkedList pushEnd
+INFO: Added element 41 to the end of the list
+крс 25, 2014 1:13:43 AM bag.MyLinkedList pushEnd
+INFO: Added element 2 to the end of the list
+крс 25, 2014 1:13:43 AM bag.MyLinkedList show
+INFO: Showing list
+крс 25, 2014 1:13:43 AM bag.MyLinkedList pushList
+INFO: 2 elements added after element 87
+крс 25, 2014 1:13:43 AM bag.MyLinkedList show
 INFO: Showing list

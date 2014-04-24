@@ -26,25 +26,29 @@ public class MyLinkedList {
 	public void pushBeginning(int value){
 		Node push = new Node(value);
 	    if(tail==null){
-	    	head=push;	
+	    	head=push;
+	    	tail=push;
 	    }
 	    else{
 	    	tail.prev=push;
 	    	push.next=tail;
 	        tail=push;
 	    }
+	    MyLinkedList.logDoc.info("Added element " + value + " to the beggining of the list");
 	}
 	
 	public void pushEnd(int value){
 		Node push=new Node(value);
 		if(tail==null){
 			tail=push;
+			head=push;
 		}
 		else{
 		    head.next=push;
 		    push.prev=head;
 		}
 		 head=push;
+		 MyLinkedList.logDoc.info("Added element " + value + " to the end of the list");
 	}
 	
 	public void popBeginning(){
@@ -54,6 +58,7 @@ public class MyLinkedList {
 		else
 			tail.next.prev=null;
 		tail=tail.next;	
+		MyLinkedList.logDoc.info("First element of the list deleted");
 	}
 	
 	public void popEnd(){
@@ -63,6 +68,7 @@ public class MyLinkedList {
 		else
 		    head.prev.next=null;
 		head=head.prev;
+		MyLinkedList.logDoc.info("Last element of the list deleted");
 	}
 	
     public void show(){
@@ -71,9 +77,10 @@ public class MyLinkedList {
      		System.out.print(show.value + " ");
      		show=show.next;
      	}
+     	MyLinkedList.logDoc.info("Showing list");
     }
     
-    public void pushList(int value,MyLinkedList mylist)throws WrongNumberException{
+    public void pushList(int value,MyLinkedList mylist,int numElem)throws WrongNumberException{
     	assert(mylist!=null);
     	Node push=tail;
     	if(push!=null){
@@ -97,12 +104,13 @@ public class MyLinkedList {
     			head=push;
     			mylist.head=head;
     		}
+    		MyLinkedList.logDoc.info(numElem + " elements added after element " + value);
     	}else throw new WrongNumberException("No number to add after!");
         
     }
     
     
-    public void popList(int value)throws WrongNumberException{
+    public void popList(int value,int numElem)throws WrongNumberException{
     	Node push=head;
     	if(push!=null){
     		Node push1=null;
@@ -123,6 +131,7 @@ public class MyLinkedList {
     				head.next=null;
     			}
     		}
+    		MyLinkedList.logDoc.info(numElem + " elements deleted after element " + value);
     	}else throw new WrongNumberException("No number to delete after!");
     }
     
@@ -146,6 +155,7 @@ public class MyLinkedList {
     		}
     		sort1=sort1.prev;
     	}
+    	MyLinkedList.logDoc.info("List sorting done");
     	return;
     }
     
@@ -198,7 +208,6 @@ public class MyLinkedList {
     				elem=scan.nextInt();
     				list.pushBeginning(elem);
     				list.show();
-    				logDoc.info(elem + " added to the beggining");
     				System.out.println();
     				break;
     				}
@@ -213,13 +222,9 @@ public class MyLinkedList {
     	        }
     			case 4:{
     				try{
-    					System.out.print("Udalyaem element:");
-    					System.out.println();
     					list.popBeginning();
-    					logDoc.info("First element deleted");
     				}catch(NullPointerException e){
     					logDoc.log(Level.SEVERE,"Exception:",e);
-    					System.out.println("Nechego udalyat'");
     				}
     				list.show();
     				System.out.println();
@@ -227,13 +232,9 @@ public class MyLinkedList {
     		    }
     		    case 5:{
     		    	try{
-    		    		System.out.print("Udalyaem element:");
-    		    		System.out.println();
     		    		list.popEnd();
-    		    		logDoc.info("Last element deleted");
     		    	}catch(NullPointerException e){
     		    		logDoc.log(Level.SEVERE,"Exception:",e);
-    					System.out.println("Nechego udalyat'");
     				}
     				list.show();
     				System.out.println();
@@ -254,8 +255,7 @@ public class MyLinkedList {
     		    	list1.show();
     		    	System.out.println();
     		    	try{
-    		    		list.pushList(elem2,list1);
-    		    		logDoc.info(numElem + " elements added after element " + elem2 );
+    		    		list.pushList(elem2,list1,numElem);	
     		    	}catch(WrongNumberException e){
     		    		logDoc.log(Level.SEVERE,"Exception:",e);
     					System.err.println(e.toString());	
@@ -273,8 +273,7 @@ public class MyLinkedList {
     		    	elem2=scan.nextInt();
     		    	try{
     		    		for(int i=0;i<numElem;i++)
-    		    			list.popList(elem2);
-    		    		logDoc.info(numElem + " elements deleted after element " + elem2 );
+    		    			list.popList(elem2,numElem);
     		    	}catch(WrongNumberException e){
     		    		logDoc.log(Level.SEVERE,"Exception:",e);
     					System.err.println(e.toString());
@@ -285,19 +284,16 @@ public class MyLinkedList {
     		    }
     		    case 8:{
     				list.sortList();
-    				logDoc.info("List sorting done");
     				list.show();
     				System.out.println();
     		    	break;
     		    }
     		    case 9:{
     		    	list.show();
-    		    	logDoc.info("Showing list");
     		    	System.out.println();
     		    	break;
     		    }
     		    case 0:{
-    		    	logDoc.finest("Closing programm.Good Job!");
     		    	break;
     		    }	
     	   }       
